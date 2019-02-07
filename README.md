@@ -1,10 +1,9 @@
-# MyBasket
+# MyBasket (AKQA company technical challenge for Web Developer position)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
-## Development server
+This app is built with Angular 7 and Scss for css preprocessing and webpack for bundler.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -22,6 +21,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Open Tasks
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. It needs to update the value of the quantity when out of limits number is inserted in the number field.
+
+2. It needs to finish the post method to post all products with totals and quantities to WEB API endpoint.
+
+3. One more working day is enough to finish the open tasks and fix the possible bugs.
