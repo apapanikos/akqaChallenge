@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="img-cont">
+    <img src="assets/akqa-logo.png" alt="AKQA">
+  </div>
+  <div class="header">
+      <h1 class="header__title">Your Basket</h1>
+      <p>Items you have added to your basket are shown below.</p>
+      <p>Adjust the quantities or remove items before continueing with your purchase.</p>
+  </div>
+
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th><span>Product</span></th>
+      <th><span>Price</span></th>
+      <th><span>Qty</span></th>
+      <th><span>Cost</span></th>
+      <th></th>
+    </tr></thead>
+    <tbody>
+      <tr *ngFor="let list of products">
+        <td>{{list.product_name}}, {{list.product_size}}</td>
+        <td>{{list.product_price | currency: 'GBP'}}</td>
+        <td class="quantity">
+          <input  type="number" [formControl]='pquantity' [(value)]="list.product_quantity" (blur)="changeVal(pquantity,list.product_id)"  min="1" max="10" >
+          <div class="operators-container">
+              <button class="btn btn-success btn-xs plus" (click)="add(list.product_id)">
+                  +
+                </button>
+                <button class="btn btn-danger btn-xs minus" (click)="dec(list.product_id)">
+                 -
+                </button>
+          </div>
+        </td>
+        <td>{{list.product_cost | currency: 'GBP'}}</td>
+        <td>
+        <img class="trash-icon" src="assets/trash.png" alt="trash" (click)="del(list.product_id)">
+       </td>
+      </tr>
+      </tbody>
+      <tfoot>
+  <tr>
+    <td><h3>Subtotal</h3></td>
+    <td></td>
+    <td></td>
+    <td><h3>{{subtotal | currency: 'GBP' }}</h3></td>
+  </tr>
+  <tr>
+      <td><h3>VAT @ 20%</h3></td>
+      <td></td>
+      <td></td>
+      <td><h3>{{ vat | currency: 'GBP'}}</h3></td>
+  </tr>
+  <tr>
+      <td><h3><span>Total Cost</span></h3></td>
+      <td></td>
+      <td></td>
+      <td><h3><span>{{ total | currency: 'GBP'}}</span></h3></td>
+  </tr>
+</tfoot>
+</table>
+<div class="btn-container">
+  <button (click)="postData()" [disabled]="!products || products.length === 0">Buy Now >></button>
+</div>
+
+</div>
+
+

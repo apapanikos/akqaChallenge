@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+body,html{
+    height: 100vh;
+    margin:0;
+    padding:0;
+    background: rgb(217,217,217); /* Old browsers */
+    background: -moz-linear-gradient(45deg, rgba(217,217,217,1) 1%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(217,217,217,1) 1%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(217,217,217,1) 1%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d9d9', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    // font-family: "Droid Sans",sans-serif;
+    font-family: "Droid Serif",serif;
+}
+
+
+@media only screen and (max-width: 600px){
+    body,html{
+        height:auto !important;
+    }
+}
